@@ -17,7 +17,7 @@ import java.util.Optional;
 class UserServiceImplTest {
 
     private static final int ID          = 11;
-    private static final String userName = "teste1";
+    private static final String USERNAME = "teste1";
     private static final String PASSWORD = "teste321";
 
     @InjectMocks
@@ -63,6 +63,6 @@ class UserServiceImplTest {
     }
 
     private void startUser() {
-        user = new User_db(ID, userName, PASSWORD);
+        user = new User_db(ID, USERNAME, PASSWORD);
     }
 }
