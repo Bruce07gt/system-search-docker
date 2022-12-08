@@ -8,6 +8,7 @@ class SystemApiApplicationTests {
 
 	@Test
 	void contextLoads() {
+		SystemApiApplication.main(new String [] {});
 	}
 
 }
