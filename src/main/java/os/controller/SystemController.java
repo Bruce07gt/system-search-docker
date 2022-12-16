@@ -1,4 +1,4 @@
-package os.resources;
+package os.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import os.domain.System;
+import os.model.System;
 import os.services.SystemService;
 
 @RestController
 @RequestMapping(value = "/system")
-public class SystemResource {
+public class SystemController {
 
 	@Autowired
 	private SystemService systemService;
 	
-	public SystemResource(SystemService systemService) {
+	public SystemController(SystemService systemService) {
 		this.systemService = systemService;
 	}
 

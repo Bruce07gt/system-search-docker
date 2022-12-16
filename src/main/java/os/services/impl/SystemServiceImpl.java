@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import os.domain.System;
+import os.model.System;
 import os.repositories.SystemRepository;
 import os.services.SystemService;
 

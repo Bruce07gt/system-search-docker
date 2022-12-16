@@ -3,7 +3,7 @@ package os.services;
 import java.util.List;
 import java.util.Optional;
 
-import os.domain.System;
+import os.model.System;
 
 public interface SystemService {
 

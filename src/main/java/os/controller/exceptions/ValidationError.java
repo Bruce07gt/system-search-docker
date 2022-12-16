@@ -1,4 +1,4 @@
-package os.resources.exceptions;
+package os.controller.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

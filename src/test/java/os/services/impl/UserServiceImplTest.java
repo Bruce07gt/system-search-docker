@@ -8,7 +8,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
-import os.domain.User_db;
+import os.model.User;
 import os.repositories.UserRepository;
 
 import java.util.Optional;
@@ -18,6 +18,7 @@ class UserServiceImplTest {
 
     private static final int ID          = 11;
     private static final String USERNAME = "teste1";
+    private static final String EMAIL    = "email@email";
     private static final String PASSWORD = "teste321";
 
     @InjectMocks
@@ -27,9 +28,9 @@ class UserServiceImplTest {
     private UserRepository repository;
 
 
-    private User_db user;
+    private User user;
 
-    private Optional<User_db> optionalUser_db;
+    private Optional<User> optionalUser_db;
 
     @BeforeEach
     void setUp() {
@@ -45,7 +46,7 @@ class UserServiceImplTest {
     void whenFindBiByIdThenReturnAnUserInstance() {
         Mockito.when(repository.findById(Mockito.anyInt())).thenReturn((optionalUser_db));
 
-        Optional<User_db> response = service.findById(ID);
+        Optional<User> response = service.findById(ID);
 
         Assertions.assertEquals(Optional.class, response.getClass());
     }
@@ -63,6 +64,6 @@ class UserServiceImplTest {
     }
 
     private void startUser() {
-        user = new User_db(ID, USERNAME, PASSWORD);
+        user = new User(ID, USERNAME, EMAIL, PASSWORD);
     }
 }

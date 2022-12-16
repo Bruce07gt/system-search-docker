@@ -3,9 +3,9 @@ package os.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import os.domain.User_db;
+import os.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User_db, Integer>{
+public interface UserRepository extends JpaRepository<User, Integer>{
 
 }
